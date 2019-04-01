@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var User = require(__dirname + '/../models/User');
-var Villain = require(__dirname + '/../models/Villain');
-var GameLogic = require(__dirname + '/../util/game_logic');
+var APIdata = require(__dirname + '/../models/APIdata');
 var Admin = require(__dirname + '/../models/Admin');
 
 router.get('/user/new', function (req, res) {
@@ -11,7 +10,7 @@ router.get('/user/new', function (req, res) {
         s[5]["num"]++;
 		s[5].save();
     });
-        
+
     var log = {
         'timestamp': Date(),
         'httpverb': "GET",
@@ -51,46 +50,13 @@ router.get('/users/:id/edit', function (req, res) {
     });
 });
 
-router.get('/user/:id/results', function (request, response) {
-	var log = {
-		'timestamp': Date(),
-		'httpverb': "GET",
-		'username': request.params.id,
-		'route': "/user/:id/results"
-	}
-	Admin.logData(log);
-	console.log(log);
-
-	var villain = request.query.villain;
-	var browserChoice = Villain.browserOutcome(villain, request.query.weapon);
-	GameLogic.findResult(request.params.id, browserChoice, request.query.weapon, villain, function (outcome) {
-		User.getUserByName(request.params.id, function (usar) {
-			var fname = usar["firstname"];
-			var result = {
-				name: request.params.id,
-				fname: fname,
-				weapon: request.query.weapon,
-				browserChoice: browserChoice,
-				outcome: outcome,
-				villain: request.query.villain
-			};
-			response.status(200);
-			response.setHeader('Content-Type', 'text/html')
-			response.render('results', {
-				username: request.params.id,
-				results: result
-			});
-		});
-	})
-});
-
 router.put('/users/:id', function (req, res) {
-    
+
     Admin.getPageStats(function (s) {
         s[5]["num"]++;
 		s[5].save();
     });
-    
+
 	var log = {
 		'timestamp': Date(),
 		'httpverb': "PUT",
@@ -150,12 +116,12 @@ router.put('/users/:id', function (req, res) {
 });
 
 router.delete('/users/:id', function (req, res) {
-	
+
     Admin.getPageStats(function (s) {
         s[0]["num"]++;
 		s[0].save();
     });
-    
+
     var log = {
 		'timestamp': Date(),
 		'httpverb': "DELETE",
@@ -178,12 +144,12 @@ router.delete('/users/:id', function (req, res) {
 });
 
 router.post('/users', function (req, res) {
-    
+
     Admin.getPageStats(function (s) {
         s[0]["num"]++;
 		s[0].save();
     });
-    
+
 	var log = {
 		'timestamp': Date(),
 		'httpverb': "POST",
@@ -217,13 +183,13 @@ router.post('/users', function (req, res) {
 });
 
 router.get('/login', function (request, response) {
-    
+
     Admin.getPageStats(function (s) {
         s[0]["num"]++;
 		s[0].save();
     });
-    
-    
+
+
 	var log = {
 		'timestamp': Date(),
 		'httpverb': "GET",
@@ -242,7 +208,7 @@ router.get('/login', function (request, response) {
 		if (res != "Wrong user/password") {
 			response.status(200);
 			response.setHeader('Content-Type', 'text/html')
-			response.render('game', {
+			response.render('user_details', {
 				user: user_data
 			});
 		} else {

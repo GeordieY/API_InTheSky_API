@@ -8,41 +8,6 @@ if (document.title == "P,R,S - User Details") {
 	}
 }
 
-if (document.title == "P,R,S - Game") {
-	var userBox = document.getElementById("userBox").innerHTML;
-	if (!localUser && userBox != "") {
-		localStorage.setItem('currentUser', userBox);
-		localUser = localStorage.getItem("currentUser");
-	}
-	if (!localUser) {
-		window.location.replace("/");
-	} else {
-		//document.getElementById("greeter").textContent = localUser[0].toUpperCase() + localUser.substring(1) + ", it's your turn to bust a move!";
-		document.getElementById("gameForm").action = "/user/" + localUser + "/results";
-	}
-	window.addEventListener("load", function () {
-		var refImg = document.getElementById("refImage");
-		refImg.className = "greenSVG";
-		setTimeout(onTimerElapsed, 1000);
-	});
-
-	villainChoice = document.getElementById("villainChoice");
-	villainChoice.onchange = function () {
-		if (villainChoice.value == "") {
-			document.getElementById("villainWaitingHand").innerHTML = "";
-			document.getElementById("villainWaitingHand").classList.remove("bodydiv");
-			document.getElementById("villainWaitingHand").classList.add("hidden");
-		} else {
-			document.getElementById("villainWaitingHand").classList.remove("hidden");
-			document.getElementById("villainWaitingHand").classList.add("bodydiv");
-			var vilName = villainChoice.value.toLowerCase().split(' ').join('_').split('.').join('');
-			document.getElementById("villainWaitingHand").innerHTML = "<p>" + villainChoice.value + " is ready.</p><br><img id='" + vilName + "' class='villainWaitingImg' src='/images/" + vilName + "_waiting.svg'>";
-		}
-	}
-
-
-}
-
 if (document.title == "P,R,S - Index") { //handles login checking and redirection
 	if (localUser) {
 		var found = false;
@@ -88,32 +53,6 @@ document.getElementById("headerLogout").addEventListener("click", function () {
 	localStorage.clear();
 	window.location.replace("/");
 });
-
-function onTimerElapsed() { //handles ref actions
-	var refText = document.getElementById("referee-text");
-	var refImg = document.getElementById("refImage");
-	if (refText.textContent == 'Referee: "Three!"') {
-		refText.textContent = 'Referee: "Two!"';
-		refImg.src = "/images/ref/two.svg";
-		refImg.className = "greenSVG";
-		setTimeout(onTimerElapsed, 1000);
-	} else if (refText.textContent == 'Referee: "Two!"') {
-		refText.textContent = 'Referee: "One!"';
-		refImg.src = "/images/ref/one.svg";
-		refImg.className = "greenSVG";
-		setTimeout(onTimerElapsed, 1000);
-	} else if (refText.textContent == 'Referee: "One!"') {
-		refText.textContent = 'Referee: "Shoot!"';
-		refImg.src = "/images/ref/shoot.svg";
-		refImg.className = "greenSVG";
-		setTimeout(onTimerElapsed, 2500);
-	} else if (refText.textContent == 'Referee: "Shoot!"') {
-		refText.textContent = 'Referee: "Hurry up."';
-		refImg.src = "/images/ref/watch.svg";
-		refImg.className = "redSVG";
-		clearInterval(onTimerElapsed);
-	}
-}
 
 if (document.title == "P,R,S - User Details") {
 	document.getElementById("headerEdit").innerHTML = "";
