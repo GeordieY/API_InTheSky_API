@@ -14,14 +14,16 @@
   <div id="enter_name" class="bodydiv">
 
     <h2>User Details<%if(locals.user){%>: <%-user.name%><%}%></h2>
-      
+
       <%if(locals.user){%>
       <br>
       <u>Creation date</u>: <%= user.creationdate%>
       <br><br>
-      <u>Last modified</u>: <%= user.lastupdate%><br>
+      <u>Last modified</u>: <%= user.lastupdate%>
+      <br><br>
+      <u>API key</u>: <%= user.apikey%>
       <%}%>
-      
+
     <br>
       <form action="/users<%if(locals.user){%>/<%-user["name"]%>?_method=PUT<%}%>" method="<%if(locals.user){%>post<%}else{%>post<%}%>">
   First name:<br>
@@ -49,7 +51,7 @@
           </form>
       <%}%>
       <span id="updatedUser" class="hidden"><%if(locals.updatedUser){%><%-updatedUser%><%}%></span>
-      
+
     <br>
   </div>
   <% include global/footer %>

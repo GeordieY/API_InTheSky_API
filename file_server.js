@@ -26,8 +26,7 @@ app.listen(port, function () {
 });
 
 var User = require(__dirname + '/models/User');
-var Villain = require(__dirname + '/models/Villain');
-var GameLogic = require(__dirname + '/util/game_logic');
+var APIdata = require(__dirname + '/models/APIdata');
 
 //////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////GET request handling (largely uncommented)/////////////////////
