@@ -3,13 +3,8 @@ var router = express.Router();
 
 var User = require(__dirname + '/../models/User');
 var APIdata = require(__dirname + '/../models/APIdata');
-var Admin = require(__dirname + '/../models/Admin');
 
 router.get('/user/new', function (req, res) {
-    Admin.getPageStats(function (s) {
-        s[5]["num"]++;
-		s[5].save();
-    });
 
     var log = {
         'timestamp': Date(),
@@ -17,7 +12,6 @@ router.get('/user/new', function (req, res) {
         'username': "",
         'route': "/user/new"
     }
-    Admin.logData(log);
     console.log(log);
 
     res.status(200);
@@ -26,10 +20,7 @@ router.get('/user/new', function (req, res) {
 });
 
 router.get('/users/:id/edit', function (req, res) {
-	Admin.getPageStats(function (s) {
-        s[5]["num"]++;
-		s[5].save();
-    });
+
 
     var log = {
         'timestamp': Date(),
@@ -37,7 +28,6 @@ router.get('/users/:id/edit', function (req, res) {
         'username': req.params.id,
         'route': "/user/:id/edit"
     }
-    Admin.logData(log);
     console.log(log);
 
 
@@ -52,10 +42,6 @@ router.get('/users/:id/edit', function (req, res) {
 
 router.put('/users/:id', function (req, res) {
 
-    Admin.getPageStats(function (s) {
-        s[5]["num"]++;
-		s[5].save();
-    });
 
 	var log = {
 		'timestamp': Date(),
@@ -63,7 +49,6 @@ router.put('/users/:id', function (req, res) {
 		'username': req.body.id,
 		'route': "/users/:id"
 	}
-	Admin.logData(log);
 	console.log(log);
 
 	User.getUserByName(req.params.id, function (u) {
@@ -117,10 +102,6 @@ router.put('/users/:id', function (req, res) {
 
 router.delete('/users/:id', function (req, res) {
 
-    Admin.getPageStats(function (s) {
-        s[0]["num"]++;
-		s[0].save();
-    });
 
     var log = {
 		'timestamp': Date(),
@@ -128,7 +109,6 @@ router.delete('/users/:id', function (req, res) {
 		'username': req.params.id,
 		'route': "/users/:id"
 	}
-	Admin.logData(log);
 	console.log(log);
 
 	User.deleteUser(req.params.id); //need to make a deleteUser function
@@ -145,10 +125,6 @@ router.delete('/users/:id', function (req, res) {
 
 router.post('/users', function (req, res) {
 
-    Admin.getPageStats(function (s) {
-        s[0]["num"]++;
-		s[0].save();
-    });
 
 	var log = {
 		'timestamp': Date(),
@@ -156,7 +132,6 @@ router.post('/users', function (req, res) {
 		'username': req.body.id,
 		'route': "/users"
 	}
-	Admin.logData(log);
 	console.log(log);
 
 	User.checkNewUser(req.body.id, req.body.password, req.body.password2, function (response) {
@@ -184,10 +159,6 @@ router.post('/users', function (req, res) {
 
 router.get('/login', function (request, response) {
 
-    Admin.getPageStats(function (s) {
-        s[0]["num"]++;
-		s[0].save();
-    });
 
 
 	var log = {
@@ -196,7 +167,6 @@ router.get('/login', function (request, response) {
 		'username': request.query.player_name,
 		'route': "/login"
 	}
-	Admin.logData(log);
 	console.log(log);
 
 	User.checkUsername(request.query.player_name, request.query.player_password, function (res) {
@@ -224,7 +194,7 @@ router.get('/login', function (request, response) {
 	});
 });
 
-app.get('/bumps', function(req, res){
+router.get('/bumps', function(req, res){
   res.json({ username: 'Flavio' });
 });
 

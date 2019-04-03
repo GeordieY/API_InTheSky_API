@@ -74,12 +74,7 @@ exports.createUser = function (username, password, fname, lname, callback) { //c
 	var user_object = new Object();
 	user_object["name"] = username;
 	user_object["password"] = password;
-	user_object["gamesplayed"] = 0;
-	user_object["gameswon"] = 0;
-	user_object["gameslost"] = 0;
-	user_object["paper"] = 0;
-	user_object["rock"] = 0;
-	user_object["scissors"] = 0;
+	user_object["apikey"] = makeid(8);
 	user_object["firstname"] = fname;
 	user_object["lastname"] = lname;
 	user_object["creationdate"] = Date();
@@ -87,6 +82,16 @@ exports.createUser = function (username, password, fname, lname, callback) { //c
 	doc.useServiceAccountAuth(creds, function (err) {
 		doc.addRow(1, user_object, callback);
 	});
+}
+
+function makeid(length) {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < length; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
 }
 
 exports.getUserByName = function (username, callback) { //returns user object by username
@@ -110,9 +115,6 @@ exports.getUsers = function (callback) { //gets users data from users.csv
 
 	doc.useServiceAccountAuth(creds, function (err) {
 		doc.getRows(1, function (err, rows) {
-			rows.map(function (el) {
-				return el['points'] = el["gameswon"] * 3 + (el["gamesplayed"] - el["gameswon"] - el["gameslost"]);
-			});
 			callback(rows);
 
 		});

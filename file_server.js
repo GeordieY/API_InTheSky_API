@@ -8,8 +8,6 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(favicon(__dirname + '/public/images/logo.png'));
 
-var Admin = require(__dirname + '/models/Admin');
-
 
 app.use(express.urlencoded());
 
@@ -34,18 +32,12 @@ var APIdata = require(__dirname + '/models/APIdata');
 
 app.get('/', function (request, response) {
 
-	Admin.getPageStats(function (s) {
-        s[0]["num"]++;
-		s[0].save();
-    });
-
     var log = {
         'timestamp': Date(),
         'httpverb': "GET",
         'username': "",
         'route': "/"
     }
-    Admin.logData(log);
     console.log(log);
 
     User.getUsernames(function (users) {
@@ -61,11 +53,6 @@ app.get('/', function (request, response) {
 
 app.get('/about', function (request, response) {
 
-	Admin.getPageStats(function (s) {
-        s[3]["num"]++;
-		s[3].save();
-    });
-
     var log = {
         'timestamp': Date(),
         'httpverb': "GET",
@@ -73,7 +60,6 @@ app.get('/about', function (request, response) {
         'route': "/about"
     }
 
-    Admin.logData(log);
     console.log(log);
 
     response.status(200);
