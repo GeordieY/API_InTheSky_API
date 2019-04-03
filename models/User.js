@@ -1,6 +1,6 @@
 var GoogleSpreadsheet = require('google-spreadsheet');
 var creds = require('./client_secret.json');
-var doc = new GoogleSpreadsheet('1AWi6mryVBu59Nx0Z9yszuou6xe9MetXxVZs1Om7FTps');
+var doc = new GoogleSpreadsheet('1HSA5l2u_4J0EYkh66bEFyVXNkxVrRGMU6p_Z56wSfOU');
 
 exports.setUser = function (name, ob, callback) { //updates user data
 	exports.getUsers(function (a) {
