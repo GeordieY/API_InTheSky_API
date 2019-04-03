@@ -224,4 +224,8 @@ router.get('/login', function (request, response) {
 	});
 });
 
+app.get('/bumps', function(req, res){
+  res.json({ username: 'Flavio' });
+});
+
 module.exports = router;
