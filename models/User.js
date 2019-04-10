@@ -71,6 +71,8 @@ exports.checkNewUser = function (username, password, password2, callback) { //ch
 }
 
 exports.createUser = function (username, password, fname, lname, callback) { //creates new user
+	console.log("heree");
+	console.log(password);
 	var user_object = new Object();
 	user_object["name"] = username;
 	user_object["password"] = password;
