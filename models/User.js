@@ -71,8 +71,6 @@ exports.checkNewUser = function (username, password, password2, callback) { //ch
 }
 
 exports.createUser = function (username, password, fname, lname, callback) { //creates new user
-	console.log("heree");
-	console.log(password);
 	var user_object = new Object();
 	user_object["name"] = username;
 	user_object["password"] = password;
@@ -107,7 +105,8 @@ exports.getUserByName = function (username, callback) { //returns user object by
 			}
 		}
 		if (!found) {
-			console.log("User.js line 89");
+			console.log("No user found");
+			console.trace();
 			callback(null);
 		}
 	});

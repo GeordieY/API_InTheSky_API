@@ -77,7 +77,6 @@ router.put('/users/:id', function (req, res) {
 				u['lastname'] = req.body.lname;
 				u['password'] = req.body.password;
 				User.setUser(req.params.id, u, function () {
-					console.log("read");
 					User.getUserByName(req.body.id, function (us) {
 						us['response'] = "<p class='green'>User details updated.</p>";
 						res.status(200);
@@ -134,9 +133,6 @@ router.post('/users', function (req, res) {
 	}
 	console.log(log);
 
-  console.log("req.body.id1:");
-  console.log(req.body.id);
-
 	User.checkNewUser(req.body.id, req.body.password, req.body.password2, function (response) {
 
 		if ((response == "User already taken") || (response == "Passwords do not match")) { //if new user isn't valid
@@ -146,8 +142,6 @@ router.post('/users', function (req, res) {
 				response2: response
 			}); //lets login page show error message by sendinb back user information with result information
 		} else { //if new user is valid
-      console.log("req.body.id2:");
-      console.log(req.body.id);
 			User.createUser(req.body.id, req.body.password, req.body.fname, req.body.lname, function () {
 				User.getUsernames(function (users) {
 					res.status(200);
