@@ -38,14 +38,14 @@ exports.checkUsername = function (username, password, callback) { //handles logi
 			if (username == user_data[i]["name"]) {
 				found = true;
 				if (password == user_data[i]["password"]) {
-					callback("logged in");
+					callback("logged in", user_data[i]);
 				} else {
-					callback("Wrong user/password");
+					callback("Wrong user/password", null);
 				}
 			}
 		}
 		if (!found) {
-			callback("Wrong user/password");
+			callback("Wrong user/password", null);
 		}
 
 	});

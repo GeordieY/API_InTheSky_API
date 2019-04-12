@@ -14,7 +14,7 @@ if (document.title == "P,R,S - Index") { //handles login checking and redirectio
 		document.getElementById("userBox").innerHTML.slice(0, -1).split(",").forEach(function (a) {
 			if (a == localUser) {
 				found = true;
-				window.location.replace("/game");
+				window.location.replace("/users/" + localUser + "/edit");
 			}
 		});
 		if (!found) {
@@ -25,6 +25,19 @@ if (document.title == "P,R,S - Index") { //handles login checking and redirectio
 	} else {
 		document.getElementById("headerLogout").innerHTML = "";
 	}
+}
+
+if (document.title == "P,R,S - User Details") {
+	var userBox = document.getElementById("userBox").innerHTML;
+	if (!localUser && userBox != "") {
+		localStorage.setItem('currentUser', userBox);
+		localUser = localStorage.getItem("currentUser");
+	}
+	else if (!localUser) {
+		window.location.replace("/");
+	}
+
+
 }
 
 
@@ -38,7 +51,6 @@ if (localUser) { //if user is already logged in
 	}
 	document.getElementById("headerEdit").innerHTML = "Edit Account Info";
 	document.getElementById("headerEdit").href = "/users/" + localUser + "/edit";
-	document.getElementById("statsLink").href = "/stats?username=" + localUser;
 
 } else {
 	if (document.title != "P,R,S - Index") {

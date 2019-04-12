@@ -13,10 +13,10 @@ router.get('/user/new', function (req, res) {
         'route': "/user/new"
     }
     console.log(log);
-
+    var createPage = {'content':"hello"}
     res.status(200);
     res.setHeader('Content-Type', 'text/html')
-    res.render('user_details');
+    res.render('user_details', createPage);
 });
 
 router.get('/users/:id/edit', function (req, res) {
@@ -174,7 +174,7 @@ router.get('/login', function (request, response) {
 	}
 	console.log(log);
 
-	User.checkUsername(request.query.player_name, request.query.player_password, function (res) {
+	User.checkUsername(request.query.player_name, request.query.player_password, function (res, userActual) {
 		var user_data = {
 			username: request.query.player_name,
 			password: request.query.player_password,
@@ -184,7 +184,7 @@ router.get('/login', function (request, response) {
 			response.status(200);
 			response.setHeader('Content-Type', 'text/html')
 			response.render('user_details', {
-				user: user_data
+				user: userActual
 			});
 		} else {
 			User.getUsers(function (users) {

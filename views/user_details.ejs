@@ -6,6 +6,9 @@
  </head>
 
 <body>
+
+  <span id="userBox"><%if(locals.createPage){%><%=createPage.content%><%}%><%if(locals.user){%><%=user.name%><%}%></span>
+
   <% include global/header %>
 
 
@@ -22,6 +25,7 @@
       <u>Last modified</u>: <%= user.lastupdate%>
       <br><br>
       <u>API key</u>: <%= user.apikey%>
+      <br>
       <%}%>
 
     <br>
@@ -55,6 +59,7 @@
     <br>
   </div>
   <% include global/footer %>
+
   <script src="../../scripts/scripts.js"></script>
  </body>
 </html>
