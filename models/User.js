@@ -70,13 +70,14 @@ exports.checkNewUser = function (username, password, password2, callback) { //ch
 	});
 }
 
-exports.createUser = function (username, password, fname, lname, callback) { //creates new user
+exports.createUser = function (username, password, fname, lname, email, callback) { //creates new user
 	var user_object = new Object();
 	user_object["name"] = username;
 	user_object["password"] = password;
 	user_object["apikey"] = makeid(8);
 	user_object["firstname"] = fname;
 	user_object["lastname"] = lname;
+	user_object["email"] = email;
 	user_object["creationdate"] = Date();
 	user_object["lastupdate"] = Date();
 	doc.useServiceAccountAuth(creds, function (err) {

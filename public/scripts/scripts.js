@@ -1,6 +1,6 @@
 var localUser = localStorage.getItem("currentUser");
 
-if (document.title == "P,R,S - User Details") {
+if (document.title == "BAC - User Details") {
 	var up = document.getElementById("updatedUser");
 	if (up.innerHTML != "") {
 		localStorage.setItem("currentUser", up.innerHTML);
@@ -8,7 +8,7 @@ if (document.title == "P,R,S - User Details") {
 	}
 }
 
-if (document.title == "P,R,S - Index") { //handles login checking and redirection
+if (document.title == "BAC - Index") { //handles login checking and redirection
 	if (localUser) {
 		var found = false;
 		document.getElementById("userBox").innerHTML.slice(0, -1).split(",").forEach(function (a) {
@@ -27,14 +27,14 @@ if (document.title == "P,R,S - Index") { //handles login checking and redirectio
 	}
 }
 
-if (document.title == "P,R,S - User Details") {
+if (document.title == "BAC - User Details") {
 	var userBox = document.getElementById("userBox").innerHTML;
 	if (!localUser && userBox != "") {
 		localStorage.setItem('currentUser', userBox);
 		localUser = localStorage.getItem("currentUser");
 	}
 	else if (!localUser) {
-		window.location.replace("/");
+		//window.location.replace("/");
 	}
 
 
@@ -44,7 +44,7 @@ if (document.title == "P,R,S - User Details") {
 if (localUser) { //if user is already logged in
 	document.getElementById("headerDivider").innerHTML = "|";
 	document.getElementById("headerLogout").innerHTML = "Log Out";
-	if (document.title == "P,R,S - User Details") {
+	if (document.title == "BAC - User Details") {
 		document.getElementById("headerGreeter").innerHTML = "Logged in as " + localUser;
 	} else {
 		document.getElementById("headerGreeter").innerHTML = "Logged in as " + localUser + " | ";
@@ -53,7 +53,7 @@ if (localUser) { //if user is already logged in
 	document.getElementById("headerEdit").href = "/users/" + localUser + "/edit";
 
 } else {
-	if (document.title != "P,R,S - Index") {
+	if (document.title != "BAC - Index") {
 		document.getElementById("headerLogout").innerHTML = "Log In";
 	}
 	document.getElementById("headerLogout").href = "/";
@@ -66,7 +66,7 @@ document.getElementById("headerLogout").addEventListener("click", function () {
 	window.location.replace("/");
 });
 
-if (document.title == "P,R,S - User Details") {
+if (document.title == "BAC - User Details") {
 	document.getElementById("headerEdit").innerHTML = "";
 	document.getElementById("headerEdit").href = "/";
 }

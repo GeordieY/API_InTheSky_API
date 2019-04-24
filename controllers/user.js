@@ -72,7 +72,7 @@ router.put('/users/:id', function (req, res) {
 					updatedUser = req.body.id;
 				}
 				u['name'] = req.body.id;
-
+        u['email'] = req.body.email;
 				u['firstname'] = req.body.fname;
 				u['lastname'] = req.body.lname;
 				u['password'] = req.body.password;
@@ -132,6 +132,7 @@ router.post('/users', function (req, res) {
 		'route': "/users"
 	}
 	console.log(log);
+  console.log(req.body);
 
 	User.checkNewUser(req.body.id, req.body.password, req.body.password2, function (response) {
 
@@ -142,7 +143,7 @@ router.post('/users', function (req, res) {
 				response2: response
 			}); //lets login page show error message by sendinb back user information with result information
 		} else { //if new user is valid
-			User.createUser(req.body.id, req.body.password, req.body.fname, req.body.lname, function () {
+			User.createUser(req.body.id, req.body.password, req.body.fname, req.body.lname, req.body.email, function () {
 				User.getUsernames(function (users) {
 					res.status(200);
 					res.setHeader('Content-Type', 'text/html')
