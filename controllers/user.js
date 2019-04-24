@@ -195,6 +195,12 @@ router.get('/login', function (request, response) {
 });
 
 router.get('/bumps', function(req, res){
+  //check api key, query parameter
+  res.json({ username: 'Flavio' });
+});
+
+router.get('/crashes', function(req, res){
+  //check api key, query parameter
   res.json({ username: 'Flavio' });
 });
 
