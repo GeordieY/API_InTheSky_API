@@ -198,6 +198,21 @@ router.get('/bumps', function(req, res){
   User.checkAPIkey(req.query.apikey, function(result){
     if(result){
       APIdata.getBumps(function(rows){
+        if(req.query.keywordtype=="date"){
+
+        }
+        else if(req.query.keywordtype=="street"){
+
+        }
+        else if(req.query.keywordtype=="shape"){
+
+        }
+        else if(req.query.keywordtype=="zip"){
+
+        }
+        else if(req.query.keywordtype=="borough"){
+
+        }
 
       });
     }
@@ -209,8 +224,35 @@ router.get('/bumps', function(req, res){
 });
 
 router.get('/crashes', function(req, res){
-  //check api key, query parameter
-  res.json({ username: 'Flavio' });
+
+  User.checkAPIkey(req.query.apikey, function(result){
+    if(result){
+      APIdata.getCrashes(function(rows){
+        if(req.query.keywordtype=="zip"){
+
+        }
+        else if(req.query.keywordtype=="killed"){
+
+        }
+        else if(req.query.keywordtype=="injured"){
+
+        }
+        else if(req.query.keywordtype=="borough"){
+
+        }
+        else if(req.query.keywordtype=="date"){
+
+        }
+        else if(req.query.keywordtype=="street"){
+
+        }
+      });
+    }
+    else{
+      res.json({ errmessage: 'API key not found' });
+    }
+
+  });
 });
 
 module.exports = router;
