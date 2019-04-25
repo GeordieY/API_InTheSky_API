@@ -195,6 +195,15 @@ router.get('/login', function (request, response) {
 });
 
 router.get('/bumps', function(req, res){
+  User.checkAPIkey(req.query.apikey, function(result){
+    if(result){
+
+    }
+    else{
+      res.json({ errmessage: 'API key not found' });
+    }
+
+  });
   //check api key, query parameter
   res.json({ username: 'Flavio' });
 });

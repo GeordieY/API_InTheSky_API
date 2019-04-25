@@ -12,7 +12,20 @@ var doc = new GoogleSpreadsheet('1HSA5l2u_4J0EYkh66bEFyVXNkxVrRGMU6p_Z56wSfOU');
 	fs.writeFileSync("data/villains.csv", string, "utf8");
 }*/
 
-exports.getBumps=function(){
+exports.getBumps=function(callback){
 
-	
+	doc.useServiceAccountAuth(creds, function (err) {
+		doc.getRows(2, function (err, rows) {
+			callback(rows);
+		});
+	});
+}
+
+exports.getCrashes=function(callback){
+
+	doc.useServiceAccountAuth(creds, function (err) {
+		doc.getRows(3, function (err, rows) {
+			callback(rows);
+		});
+	});
 }

@@ -132,6 +132,19 @@ exports.getUsernames = function (callback) {
 	});
 }
 
+exports.checkAPIkey = function (apikey, callback){
+	exports.getUsers(function (user_data) {
+		callback(user_data.reduce(function (keyfound, key) {
+			if(keyfound||key==apikey){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}));
+	});
+}
+
 /*exports.sendUsers=function(user_data) { //updates users.csv
 	var string = "username,password,games_played,games_won,games_lost,paper,rock,scissors,first name,last name";
 	for (var i = 0; i < user_data.length; i++) {
