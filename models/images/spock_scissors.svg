@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 100 100"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg3455"
+   sodipodi:docname="spock_scissors.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata3461">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3459" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview3457"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="103.61219"
+     inkscape:cy="50"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3455" />
+  <title
+     id="title3437">HANDS_1px_grid</title>
+  <path
+     d="M47,51.5a1.5,1.5,0,0,0,0-3H43a1.5,1.5,0,0,0,0,3Z"
+     id="path3439"
+     style="fill:#800080" />
+  <path
+     d="M36.5,72.6V70a1.5,1.5,0,0,0-3,0v4A1.5,1.5,0,0,0,35,75.5,8.51,8.51,0,0,1,43.5,84a1.5,1.5,0,0,0,3,0A11.52,11.52,0,0,0,36.5,72.6Z"
+     id="path3441"
+     style="fill:#800080" />
+  <path
+     d="M33.5,60A1.5,1.5,0,0,0,35,61.5H55a1.5,1.5,0,0,0,0-3H35A1.5,1.5,0,0,0,33.5,60Z"
+     id="path3443"
+     style="fill:#800080" />
+  <path
+     d="M80,55.5H75a11.47,11.47,0,0,0-8.5,3.77V56A48,48,0,0,1,67,48.06l5.21-29.54a6.49,6.49,0,0,0-9.75-6.69,6.52,6.52,0,0,0-.86-1.71,6.5,6.5,0,0,0-11.73,2.6L45,40.47l-3.7-21a6.5,6.5,0,0,0-12.87,1.75,6.44,6.44,0,0,0-3.65-.41,6.51,6.51,0,0,0-5.27,7.53L23.5,51v6a1.5,1.5,0,0,0,3,0V50.87s0-.09,0-.14,0-.08,0-.12l-4-22.77a3.5,3.5,0,0,1,6.89-1.23l1.4,7.94h0L33.21,48.5H33a1.5,1.5,0,0,0,0,3h4a1.5,1.5,0,0,0,0-3h-.74L32.31,26.1v0l-.85-4.85A3.5,3.5,0,1,1,38.34,20l4.19,23.77a2.5,2.5,0,0,0,4.92,0l5.39-30.55a3.5,3.5,0,0,1,6.89,1.22l-6,34H53a1.5,1.5,0,0,0,0,3h4a1.5,1.5,0,0,0,0-3h-.21l5.59-31.72A3.5,3.5,0,1,1,69.27,18L64.07,47.54A50.66,50.66,0,0,0,63.5,56v9.6A11.51,11.51,0,0,0,53.5,77a1.5,1.5,0,0,0,3,0A8.51,8.51,0,0,1,65,68.5,1.5,1.5,0,0,0,66.5,67,8.51,8.51,0,0,1,75,58.5h5a3.5,3.5,0,0,1,0,7H75A1.5,1.5,0,0,0,73.5,67v7A8.51,8.51,0,0,1,65,82.5,1.5,1.5,0,0,0,63.5,84v5a1.5,1.5,0,0,0,3,0V85.4A11.52,11.52,0,0,0,76.5,74V68.5H80a6.5,6.5,0,0,0,0-13Z"
+     id="path3445"
+     style="fill:#800080" />
+  <path
+     d="M25,68.5A1.5,1.5,0,0,0,26.5,67V63a1.5,1.5,0,0,0-3,0v4A1.5,1.5,0,0,0,25,68.5Z"
+     id="path3447"
+     style="fill:#800080" />
+  <path
+     d="M63.94,92.94A1.5,1.5,0,0,0,63.5,94a1.5,1.5,0,0,0,3,0,1.5,1.5,0,0,0-.44-1.06A1.55,1.55,0,0,0,63.94,92.94Z"
+     id="path3449"
+     style="fill:#800080" />
+  <path
+     d="M28.94,92.94A1.5,1.5,0,0,0,28.5,94a1.36,1.36,0,0,0,0,.29,1.31,1.31,0,0,0,.09.28,1.26,1.26,0,0,0,.13.26,2.11,2.11,0,0,0,.19.23,1.5,1.5,0,0,0,2.12,0,1.52,1.52,0,0,0,.33-.49,2.25,2.25,0,0,0,.08-.28,1.36,1.36,0,0,0,0-.29,1.52,1.52,0,0,0-.44-1.06A1.55,1.55,0,0,0,28.94,92.94Z"
+     id="path3451"
+     style="fill:#800080" />
+  <path
+     d="M30,82.5A3.5,3.5,0,0,1,26.5,79V73a1.5,1.5,0,0,0-3,0v6a6.51,6.51,0,0,0,5,6.32V89a1.5,1.5,0,0,0,3,0V84A1.5,1.5,0,0,0,30,82.5Z"
+     id="path3453"
+     style="fill:#800080" />
+</svg>
