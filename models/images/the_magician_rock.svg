@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   data-name="Warstwa 1"
+   viewBox="0 0 100 100"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg3139"
+   sodipodi:docname="the_magician_rock.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata3145">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3143" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview3141"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="65.87839"
+     inkscape:cy="50"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3139" />
+  <title
+     id="title3133">hand_earth</title>
+  <path
+     d="M 32.37,78 H 33 V 73.17 L 38.17,68 h 10 L 56.49,59.68 60.84,58.26 72,60 H 90 V 80 H 72.83 l -14,14 H 33.59 L 10,83.32 v -6.76 l 7,-5 z M 14,80.68 34.41,90 h 22.76 l 14,-14 H 86 V 64 H 71.87 L 61.17,62.36 58.64,63.19 49.83,72 h -10 L 37,74.83 V 78 h 14.17 l 5.41,-5.41 2.83,2.83 -6.58,6.58 h -21.2 l -14,-5.93 -3.63,2.56 z"
+     id="path3135"
+     inkscape:connector-curvature="0" />
+  <path
+     d="M 36.3,7.48 57,28.17 V 49 L 40.63,62.1 14.92,59.96 6,47.65 V 25.88 Z M 10,44.19 26.51,41.19 30.69,29.52 22,20.84 10,28.13 Z M 35.7,12.52 25.53,18.7 33.83,27 H 50.17 Z M 53,31 H 34.41 L 30.23,42.7 40.41,57.11 53,47 Z M 17.08,56.08 35.89,57.65 27.1,45.19 11.23,48 Z"
+     id="path3137"
+     style="fill:#784421"
+     inkscape:connector-curvature="0" />
+</svg>

@@ -1,6 +1,6 @@
 var GoogleSpreadsheet = require('google-spreadsheet');
 var creds = require('./client_secret.json');
-var doc = new GoogleSpreadsheet('1HSA5l2u_4J0EYkh66bEFyVXNkxVrRGMU6p_Z56wSfOU');
+var doc = new GoogleSpreadsheet('1QMyQyfTo4FLFeOK5HXHXs6JyE4ng0IWw4yl78b4TWcA');
 
 /*exports.sendVillains=function(browser_data) { //updates villains.csv
 		var string = "name,special,games_played,games_won,games_lost,paper,rock,scissors";
@@ -14,6 +14,7 @@ var doc = new GoogleSpreadsheet('1HSA5l2u_4J0EYkh66bEFyVXNkxVrRGMU6p_Z56wSfOU');
 
 exports.getBumps=function(callback){
 
+<<<<<<< HEAD
 	doc.useServiceAccountAuth(creds, function (err) {
 		doc.getRows(2, function (err, rows) {
 			callback(rows);
@@ -28,4 +29,7 @@ exports.getCrashes=function(callback){
 			callback(rows);
 		});
 	});
+=======
+
+>>>>>>> 9c9e83bf7afe3f51929148bf4e86c1cf06bade7d
 }

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   data-name="Warstwa 1"
+   viewBox="0 0 100 100"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg3054"
+   sodipodi:docname="the_magician_paper.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata3060">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3058" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview3056"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="65.466102"
+     inkscape:cy="92.504083"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3054" />
+  <title
+     id="title3042">hand_file</title>
+  <path
+     d="M 36.37,78 H 37 V 73.17 L 42.17,68 h 10 L 60.49,59.68 64.84,58.26 76,60 H 94 V 80 H 76.83 l -14,14 H 37.59 L 14,83.32 v -6.76 l 7,-5 z M 18,80.68 38.41,90 h 22.76 l 14,-14 H 90 V 64 H 75.87 L 65.17,62.36 62.64,63.19 53.83,72 h -10 L 41,74.83 V 78 h 14.17 l 5.42,-5.41 2.82,2.82 -6.58,6.59 h -21.2 l -14,-5.93 -3.63,2.56 z"
+     id="path3044"
+     inkscape:connector-curvature="0" />
+  <path
+     d="M 19.17,6 H 50 V 58 H 6 V 19.17 Z M 10,54 H 46 V 10 H 20.83 L 10,20.83 Z"
+     id="path3046"
+     style="fill:#ffcc00"
+     inkscape:connector-curvature="0" />
+  <rect
+     x="-40"
+     y="28"
+     width="24"
+     height="4"
+     id="rect3048"
+     style="fill:#ffd42a"
+     transform="scale(-1,1)" />
+  <rect
+     x="-40"
+     y="36"
+     width="24"
+     height="4"
+     id="rect3050"
+     style="fill:#ffd42a"
+     transform="scale(-1,1)" />
+  <rect
+     x="-40"
+     y="44"
+     width="14"
+     height="4"
+     id="rect3052"
+     style="fill:#ffdd55"
+     transform="scale(-1,1)" />
+</svg>

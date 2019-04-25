@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   data-name="Warstwa 1"
+   viewBox="0 0 100 100"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg3217"
+   sodipodi:docname="the_magician_scissors.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata3223">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3221" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview3219"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="63.827265"
+     inkscape:cy="50"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3217" />
+  <title
+     id="title3205">hand_wind</title>
+  <path
+     d="M 30.37,78 H 31 V 73.17 L 36.17,68 h 10 L 54.49,59.68 58.84,58.26 70,60 H 88 V 80 H 70.83 l -14,14 H 31.59 L 8,83.32 v -6.76 l 7,-5 z M 12,80.68 32.41,90 h 22.76 l 14,-14 H 84 V 64 H 69.87 L 59.17,62.36 56.64,63.19 47.83,72 h -10 L 35,74.83 V 78 h 14.17 l 5.41,-5.41 2.83,2.83 -6.58,6.58 h -21.2 l -14,-5.93 -3.63,2.56 z"
+     id="path3207"
+     inkscape:connector-curvature="0" />
+  <polygon
+     points="70,58 70,62 75.83,62 80,57.83 80,50.17 75.83,46 38,46 38,50 74.17,50 76,51.83 76,56.17 74.17,58 "
+     id="polygon3209"
+     style="fill:#80b3ff"
+     transform="matrix(-1,0,0,1,94,0)" />
+  <polygon
+     points="30,42 79.17,42 84,46.83 84,52 88,52 88,45.17 80.83,38 30,38 "
+     id="polygon3211"
+     style="fill:#80b3ff"
+     transform="matrix(-1,0,0,1,94,0)" />
+  <polygon
+     points="80,14.17 75.83,10 70,10 70,14 74.17,14 76,15.83 76,20.17 74.17,22 14,22 14,26 75.83,26 80,21.83 "
+     id="polygon3213"
+     style="fill:#80b3ff"
+     transform="matrix(-1,0,0,1,94,0)" />
+  <polygon
+     points="84,25.17 79.17,30 22,30 22,34 80.83,34 88,26.83 88,20 84,20 "
+     id="polygon3215"
+     style="fill:#80b3ff"
+     transform="matrix(-1,0,0,1,94,0)" />
+</svg>

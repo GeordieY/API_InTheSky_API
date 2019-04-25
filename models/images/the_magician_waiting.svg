@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   data-name="Warstwa 1"
+   viewBox="0 0 100 100"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg3287"
+   sodipodi:docname="the_magician_waiting.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata3293">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3291" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview3289"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="-2.3305085"
+     inkscape:cy="50"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3287" />
+  <title
+     id="title3279">hands_care_heart</title>
+  <path
+     d="M84.32,14H77.56l-5,7L78,36.37V37H73.17L68,42.17v10l-8.32,8.32-1.42,4.35L60,76V94H80V76.83l14-14V37.59ZM90,61.17l-14,14V90H64V75.88l-1.64-10.7.83-2.53L72,53.83v-10L74.83,41H78V55.17l-5.41,5.41,2.83,2.83L82,56.83V35.63l-4.93-14L79.63,18h2.05L90,38.41Z"
+     id="path3281" />
+  <path
+     d="M32,52.17v-10L26.83,37H22v-.63L27.42,21l-5-7H15.68L6,37.59V62.83l14,14V94H40V76l1.74-11.19-1.42-4.35Zm4,23.7V90H24V75.17l-14-14V38.41L18.32,18h2.05l2.56,3.62L18,35.63V56.83l6.59,6.59,2.83-2.83L22,55.17V41h3.17L28,43.83v10l8.81,8.81.83,2.53Z"
+     id="path3283" />
+  <path
+     d="M68,12.76,62.47,10h-7.3L50,15.17,44.83,10h-7.3L32,12.76V26.94L50,44.82,68,26.94ZM64,25.28,50,39.18,36,25.28v-10L38.47,14h4.7L50,20.83,56.83,14h4.7L64,15.24Z"
+     id="path3285"
+     style="fill:#ff0000" />
+</svg>

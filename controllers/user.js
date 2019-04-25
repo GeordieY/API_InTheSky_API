@@ -195,6 +195,7 @@ router.get('/login', function (request, response) {
 });
 
 router.get('/bumps', function(req, res){
+<<<<<<< HEAD
   User.checkAPIkey(req.query.apikey, function(result){
     if(result){
 
@@ -204,6 +205,8 @@ router.get('/bumps', function(req, res){
     }
 
   });
+=======
+>>>>>>> 9c9e83bf7afe3f51929148bf4e86c1cf06bade7d
   //check api key, query parameter
   res.json({ username: 'Flavio' });
 });

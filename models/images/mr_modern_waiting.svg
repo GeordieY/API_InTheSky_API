@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   data-name="Warstwa 1"
+   viewBox="0 0 100 100"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg1899"
+   sodipodi:docname="mr_modern_waiting.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata1905">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1903" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview1901"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="64.829004"
+     inkscape:cy="50"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1899" />
+  <title
+     id="title1895">hand_rock2</title>
+  <path
+     d="M70.83,25H63l-3,3.17v5.59H53.59L50.83,31H44V15l-3-3H33.17L30,15.17V52H25.17L20,57.17V76.83L37.17,94H56.83L74,76.83V28.17ZM54,37.76h6V53.17l-.83.83H54ZM44,35h5.17l.83.83V54H44.83L44,53.17ZM34,50V16.83l.83-.83h4.34l.83.83V52H34ZM70,75.17,55.17,90H38.83L24,75.17V58.83L26.83,56H41.17l.83.83v2.34L39.17,62H30v4H40.83L48,58H60.83L64,54.83v-25l.83-.83h4.34l.83.83Z"
+     id="path1897"
+     style="fill:#44aa00" />
+</svg>
