@@ -213,6 +213,9 @@ router.get('/bumps', function(req, res){
         else if(req.query.keywordtype=="borough"){
 
         }
+        else if(req.query.keywordtype=="lat/long/dist"){
+
+        }
 
       });
     }
@@ -244,6 +247,9 @@ router.get('/crashes', function(req, res){
 
         }
         else if(req.query.keywordtype=="street"){
+
+        }
+        else if(req.query.keywordtype=="lat/long/dist"){
 
         }
       });
