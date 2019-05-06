@@ -204,9 +204,6 @@ router.get('/bumps', function(req, res){
         else if(req.query.keywordtype=="street"){
 
         }
-        else if(req.query.keywordtype=="shape"){
-
-        }
         else if(req.query.keywordtype=="zip"){
 
         }
