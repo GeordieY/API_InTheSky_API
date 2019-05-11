@@ -134,16 +134,16 @@ exports.getUsernames = function (callback) {
 
 exports.checkAPIkey = function (apikey, callback){
 	exports.getUsers(function (user_data) {
-		callback(user_data.reduce(function (keyfound, key) {
-			if(keyfound||key==apikey){
+		var keyfound = false;
+		user_data.forEach(function (user) {
+			if(keyfound||user["apikey"]==apikey){
 				keyfound= true;
-				return true
 			}
 			else{
 				keyfound= false;
-				return false
 			}
-		}));
+		});
+		callback(keyfound);
 	});
 }
 
