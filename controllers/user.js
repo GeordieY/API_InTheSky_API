@@ -234,6 +234,7 @@ router.get('/bumps', function(req, res){
         }
         if(filteredData!=null){
         filteredData=filteredData.map(function(row, i, arr){
+          console.log(row)
           return {"geometry":JSON.parse(row["geometry"]),"type":"Feature"};
 
         });
