@@ -234,7 +234,7 @@ router.get('/bumps', function(req, res){
         }
         if(filteredData!=null){
         filteredData=filteredData.map(function(row, i, arr){
-          return {"geometry":row["geometry"],"type":row["type"]};
+          return {"geometry":JSON.parse(row["geometry"]),"type":row["type"]};
         });
         res.send(JSON.stringify(filteredData));
       }
@@ -291,7 +291,7 @@ router.get('/crashes', function(req, res){
         }
         if(filteredData!=null){
         filteredData=filteredData.map(function(row){
-          return {"geometry":row["geometry"],"type":row["type"]};
+          return {"geometry":JSON.parse(row["geometry"]),"type":row["type"]};
         });
         res.send(JSON.stringify(filteredData));
       }
