@@ -10,18 +10,27 @@
 		<div id="rules" class="bodydiv">
 			<h2>About the Bumps and Crashes API</h2>
 			<br>
-			In this project, we looked at two API's from the <a href="https://opendata.cityofnewyork.us/">NYCOpenData</a> database.
-			After we retrieved such data, we parsed the data into a format that we would be able to utilize for our project.
-			We chose two databases that we thought would be relavent to the city in which we live:
-				<br>
+
+			This API exposes data on speed bumps and traffic accidents from the <a href="https://opendata.cityofnewyork.us/">NYCOpenData</a> database.				<br>
 				<div style="text-align: left;">
 					<br>
 					<ul>
 						<li><a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95">The Number of Motor Vechile Crashes</a> according to the NYPD.</li>
 							<br>
-						<li><a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95">Locations of Speed Humps</a> throughout New York City based off their longitudes and latitudes.</li>
+						<li><a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95">Locations of Speed Humps</a> throughout New York City.</li>
 					<ul>
-				</div>
+				</div><br>
+
+To use this API, you must sign up for an API key.  Then, you can request filtered data via the <code>/crashes</code> and <code>/bumps</code> routes.  Three parameters must be included in all requests: <code>apikey</code>, <code>keyword</code>, and <code>keywordtype</code>.  You can search by 5 keyword types:
+<ul class="nobullet">
+	<li><code>beforedate</code></li>
+	<li><code>afterdate</code></li>
+	<li><code>zipcode</code></li>
+	<li><code>street</code></li>
+	<li><code>borough</code></li>
+</ul>
+	For <code>beforedate</code> and <code>afterdate</code>, the keyword must be in the form <code>dd/mm/yyyy</code>.  An example request to our API would be: <br><br><code>http://ciy-bumpsandcrashes-api.herokuapp.com/bumps?apikey=YOUR_API_KEY&keywordtype=zipcode&keyword=10128</code>
+
 			<br>
 			<br>
 

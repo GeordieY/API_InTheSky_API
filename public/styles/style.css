@@ -277,3 +277,7 @@ td {
 	display: block;
 	vertical-align: middle
 }
+
+.nobullet{
+	list-style-type: none;
+}
