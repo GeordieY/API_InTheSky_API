@@ -232,12 +232,16 @@ router.get('/bumps', function(req, res){
             return (row["borough"].toLowerCase()==req.query.keyword.toLowerCase());
           })
         }
-        if(filteredData){
+        if(filteredData!=null){
         filteredData.map(function(row, i, arr){
           return {"geometry":row["geometry"],"type":row["type"]};
         });
+        res.send(JSON.stringify(filteredData));
       }
-      res.send(JSON.stringify(filteredData));
+      else{
+        res.send(JSON.stringify([]))
+      }
+
       });
     }
     else{
@@ -285,12 +289,16 @@ router.get('/crashes', function(req, res){
             return (row["borough"].toLowerCase()==req.query.keyword.toLowerCase());
           })
         }
-        if(filteredData){
+        if(filteredData!=null){
         filteredData.map(function(row, i, arr){
           return {"geometry":row["geometry"],"type":row["type"]};
         });
+        res.send(JSON.stringify(filteredData));
       }
-      res.send(JSON.stringify(filteredData));
+      else{
+        res.send(JSON.stringify([]))
+      }
+
       });
     }
     else{
