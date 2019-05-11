@@ -208,12 +208,14 @@ router.get('/bumps', function(req, res){
       APIdata.getBumps(function(rows){
         var filteredData;
         if(req.query.keywordtype=="beforedate"){
-            filteredData=rows.filter(function(row){
+            filteredData=rows.filter(function(row, i, arr){
+              arr[i]={"geometry":row["geometry"],"type":row["type"]};
               return (new Date(row["date"])<new Date(req.query.keyword));
             })
         }
         else if(req.query.keywordtype=="afterdate"){
-          filteredData=rows.filter(function(row){
+          filteredData=rows.filter(function(row, i, arr){
+            arr[i]={"geometry":row["geometry"],"type":row["type"]};
             return (new Date(row["date"])>new Date(req.query.keyword));
           })
         }
@@ -223,20 +225,25 @@ router.get('/bumps', function(req, res){
           })
         }
         else if(req.query.keywordtype=="street"){
-          filteredData=rows.filter(function(row){
+          filteredData=rows.filter(function(row, i, arr){
+            arr[i]={"geometry":row["geometry"],"type":row["type"]};
             return (row["street"].toLowerCase().includes(req.query.keyword.toLowerCase())||req.query.keyword.toLowerCase().includes(row["street"].toLowerCase()));
           })
         }
         else if(req.query.keywordtype=="borough"){
-          filteredData=rows.filter(function(row){
+          filteredData=rows.filter(function(row, i, arr){
+            arr[i]={"geometry":row["geometry"],"type":row["type"]};
             return (row["borough"].toLowerCase()==req.query.keyword.toLowerCase());
           })
         }
-        res.json(JSON.stringify(filteredData));
+        filteredData.forEach(function(row, i, arr){
+          arr[i]={"geometry":row["geometry"],"type":row["type"]};
+        });
+        res.send(JSON.stringify(filteredData));
       });
     }
     else{
-      res.json({ errmessage: 'API key not found' });
+      res.send(JSON.stringify({ errmessage: 'API key not found' }));
     }
 
   });
@@ -256,35 +263,43 @@ router.get('/crashes', function(req, res){
       APIdata.getCrashes(function(rows){
         var filteredData;
         if(req.query.keywordtype=="beforedate"){
-            filteredData=rows.filter(function(row){
+            filteredData=rows.filter(function(row, i, arr){
+              arr[i]={"geometry":row["geometry"],"type":row["type"]};
               return (new Date(row["date"])<new Date(req.query.keyword));
             })
         }
         else if(req.query.keywordtype=="afterdate"){
-          filteredData=rows.filter(function(row){
+          filteredData=rows.filter(function(row, i, arr){
+            arr[i]={"geometry":row["geometry"],"type":row["type"]};
             return (new Date(row["date"])>new Date(req.query.keyword));
           })
         }
         else if(req.query.keywordtype=="zipcode"){
-          filteredData=rows.filter(function(row){
+          filteredData=rows.filter(function(row, i, arr){
+            arr[i]={"geometry":row["geometry"],"type":row["type"]};
             return (row["zipcode"]==req.query.keyword);
           })
         }
         else if(req.query.keywordtype=="street"){
-          filteredData=rows.filter(function(row){
+          filteredData=rows.filter(function(row, i, arr){
+            arr[i]={"geometry":row["geometry"],"type":row["type"]};
             return (row["street"].toLowerCase().includes(req.query.keyword.toLowerCase())||req.query.keyword.toLowerCase().includes(row["street"].toLowerCase()));
           })
         }
         else if(req.query.keywordtype=="borough"){
-          filteredData=rows.filter(function(row){
+          filteredData=rows.filter(function(row, i, arr){
+            arr[i]={"geometry":row["geometry"],"type":row["type"]};
             return (row["borough"].toLowerCase()==req.query.keyword.toLowerCase());
           })
         }
-        res.json(JSON.stringify(filteredData));
+        filteredData.forEach(function(row, i, arr){
+          arr[i]={"geometry":row["geometry"],"type":row["type"]};
+        });
+        res.send(JSON.stringify(filteredData));
       });
     }
     else{
-      res.json({ errmessage: 'API key not found' });
+      res.send(JSON.stringify({ errmessage: 'API key not found' }));
     }
 
   });
