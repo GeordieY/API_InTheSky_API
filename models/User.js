@@ -137,9 +137,11 @@ exports.checkAPIkey = function (apikey, callback){
 		callback(user_data.reduce(function (keyfound, key) {
 			if(keyfound||key==apikey){
 				keyfound= true;
+				return true
 			}
 			else{
 				keyfound= false;
+				return false
 			}
 		}));
 	});
