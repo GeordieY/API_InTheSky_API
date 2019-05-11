@@ -195,25 +195,44 @@ router.get('/login', function (request, response) {
 });
 
 router.get('/bumps', function(req, res){
+  var log = {
+    'timestamp': Date(),
+    'httpverb': "GET",
+    'apikey': req.query.apikey,
+    'route': "/bumps"
+  }
+  console.log(log);
+
   User.checkAPIkey(req.query.apikey, function(result){
     if(result){
       APIdata.getBumps(function(rows){
-        if(req.query.keywordtype=="date"){
-
+        var filteredData;
+        if(req.query.keywordtype=="beforedate"){
+            filteredData=rows.filter(function(row){
+              return (new Date(row["date"])<new Date(req.query.keyword));
+            })
+        }
+        else if(req.query.keywordtype=="afterdate"){
+          filteredData=rows.filter(function(row){
+            return (new Date(row["date"])>new Date(req.query.keyword));
+          })
+        }
+        else if(req.query.keywordtype=="zipcode"){
+          filteredData=rows.filter(function(row){
+            return (row["zipcode"]==req.query.keyword);
+          })
         }
         else if(req.query.keywordtype=="street"){
-
-        }
-        else if(req.query.keywordtype=="zip"){
-
+          filteredData=rows.filter(function(row){
+            return (row["street"].toLowerCase().includes(req.query.keyword.toLowerCase())||req.query.keyword.toLowerCase().includes(row["street"].toLowerCase()));
+          })
         }
         else if(req.query.keywordtype=="borough"){
-
+          filteredData=rows.filter(function(row){
+            return (row["borough"].toLowerCase()==req.query.keyword.toLowerCase());
+          })
         }
-        else if(req.query.keywordtype=="lat/long/dist"){
-
-        }
-
+        res.json(JSON.stringify(filteredData));
       });
     }
     else{
@@ -224,31 +243,44 @@ router.get('/bumps', function(req, res){
 });
 
 router.get('/crashes', function(req, res){
+  var log = {
+    'timestamp': Date(),
+    'httpverb': "GET",
+    'apikey': req.query.apikey,
+    'route': "/crashes"
+  }
+  console.log(log);
 
   User.checkAPIkey(req.query.apikey, function(result){
     if(result){
       APIdata.getCrashes(function(rows){
-        if(req.query.keywordtype=="zip"){
-
+        var filteredData;
+        if(req.query.keywordtype=="beforedate"){
+            filteredData=rows.filter(function(row){
+              return (new Date(row["date"])<new Date(req.query.keyword));
+            })
         }
-        else if(req.query.keywordtype=="killed"){
-
+        else if(req.query.keywordtype=="afterdate"){
+          filteredData=rows.filter(function(row){
+            return (new Date(row["date"])>new Date(req.query.keyword));
+          })
         }
-        else if(req.query.keywordtype=="injured"){
-
-        }
-        else if(req.query.keywordtype=="borough"){
-
-        }
-        else if(req.query.keywordtype=="date"){
-
+        else if(req.query.keywordtype=="zipcode"){
+          filteredData=rows.filter(function(row){
+            return (row["zipcode"]==req.query.keyword);
+          })
         }
         else if(req.query.keywordtype=="street"){
-
+          filteredData=rows.filter(function(row){
+            return (row["street"].toLowerCase().includes(req.query.keyword.toLowerCase())||req.query.keyword.toLowerCase().includes(row["street"].toLowerCase()));
+          })
         }
-        else if(req.query.keywordtype=="lat/long/dist"){
-
+        else if(req.query.keywordtype=="borough"){
+          filteredData=rows.filter(function(row){
+            return (row["borough"].toLowerCase()==req.query.keyword.toLowerCase());
+          })
         }
+        res.json(JSON.stringify(filteredData));
       });
     }
     else{

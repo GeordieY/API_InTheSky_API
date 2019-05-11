@@ -136,10 +136,10 @@ exports.checkAPIkey = function (apikey, callback){
 	exports.getUsers(function (user_data) {
 		callback(user_data.reduce(function (keyfound, key) {
 			if(keyfound||key==apikey){
-				return true;
+				keyfound= true;
 			}
 			else{
-				return false;
+				keyfound= false;
 			}
 		}));
 	});
