@@ -132,7 +132,6 @@ router.post('/users', function (req, res) {
 		'route': "/users"
 	}
 	console.log(log);
-  console.log(req.body);
 
 	User.checkNewUser(req.body.id, req.body.password, req.body.password2, function (response) {
 
@@ -233,9 +232,9 @@ router.get('/bumps', function(req, res){
           })
         }
         if(filteredData!=null){
-        filteredData=filteredData.map(function(row, i, arr){
-          return {"geometry":JSON.parse(row["geometry"]),"type":"Feature"};
-
+        filteredData.forEach(function(row, i, arr){
+          arr[i]["geometry"]=JSON.parse(row["geometry"]);
+          arr[i]["type"]="Feature";
         });
         res.send(JSON.stringify(filteredData));
       }
@@ -291,7 +290,7 @@ router.get('/crashes', function(req, res){
           })
         }
         if(filteredData!=null){
-        filteredData=filteredData.map(function(row){
+        filteredData.forEach(function(row,i,arr){
           var severity="";
           if(row["numpkilled"]==0){
             if(row["numpinjured"]==0){
@@ -310,7 +309,9 @@ router.get('/crashes', function(req, res){
           else{
             severity="4";
           }
-          return {"geometry":JSON.parse(row["geometry"]),"type":"Feature","properties":{"severity":severity}};
+          arr[i]["geometry"]=JSON.parse(row["geometry"]);
+          arr[i]["type"]="Feature";
+          arr[i]["properties"]={"severity":severity};
         });
         res.send(JSON.stringify(filteredData));
       }
