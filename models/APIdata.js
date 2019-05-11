@@ -28,7 +28,7 @@ exports.getCrashes=function(callback){
 	doc.useServiceAccountAuth(creds, function (err) {
 		doc.getRows(3, function (err, rows) {
 			callback(rows.map(function(row){
-				return{"date":row["date"],"street":row["street"],"borough":row["borough"],"zipcode":row["zipcode"],"geometry":row["geometry"]}
+				return{"date":row["date"],"street":row["street"],"borough":row["borough"],"zipcode":row["zipcode"],"geometry":row["geometry"],"numpkilled":row["numpkilled"],"numpinjured":row["numpinjured"]}
 			}));
 		});
 	});

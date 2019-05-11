@@ -234,7 +234,6 @@ router.get('/bumps', function(req, res){
         }
         if(filteredData!=null){
         filteredData=filteredData.map(function(row, i, arr){
-          console.log(row)
           return {"geometry":JSON.parse(row["geometry"]),"type":"Feature"};
 
         });
@@ -293,7 +292,25 @@ router.get('/crashes', function(req, res){
         }
         if(filteredData!=null){
         filteredData=filteredData.map(function(row){
-          return {"geometry":JSON.parse(row["geometry"]),"type":"Feature"};
+          var severity="";
+          if(row["numpkilled"]==0){
+            if(row["numpinjured"]==0){
+              severity="0";
+            }
+            if(row["numpinjured"]==1){
+              severity="1";
+            }
+            if(row["numpinjured"]==2){
+              severity="2";
+            }
+            if(row["numpinjured"]>2){
+              severity="3";
+            }
+          }
+          else{
+            severity="4";
+          }
+          return {"geometry":JSON.parse(row["geometry"]),"type":"Feature","properties":{"severity":severity}};
         });
         res.send(JSON.stringify(filteredData));
       }
